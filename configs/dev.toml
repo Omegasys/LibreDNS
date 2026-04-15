@@ -1,0 +1,15 @@
+[node]
+id = "dev-node"
+listen_addr = "127.0.0.1:9000"
+
+[network]
+transport = "udp"
+enable_tls = false
+
+[dns]
+cache_size = 128
+enable_filtering = false
+
+[dhcp]
+enabled = true
+lease_ttl = 30

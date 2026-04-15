@@ -1,0 +1,16 @@
+[node]
+id = "default-node"
+listen_addr = "127.0.0.1:8080"
+
+[network]
+transport = "tcp"
+enable_tls = false
+
+[dns]
+cache_size = 1024
+enable_filtering = true
+
+[dhcp]
+enabled = true
+subnet = "10.0.0.0/24"
+lease_ttl = 60

@@ -1,0 +1,13 @@
+[dhcp]
+enabled = true
+subnet = "10.0.0.0/24"
+lease_ttl = 120
+allocation_mode = "deterministic"
+
+[dhcp.security]
+signed_leases = false
+replay_protection = true
+
+[dhcp.discovery]
+mode = "peer_to_peer"
+gossip_enabled = true

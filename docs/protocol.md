@@ -45,3 +45,45 @@ LibreDNS defines a custom DNS protocol designed for:
 ---
 
 ## Record Format
+{
+domain: string,
+type: enum,
+value: bytes,
+ttl: u32,
+signature: bytes
+}
+
+---
+
+## Validation
+
+- Records must be signed
+- Signature verified using public key
+- Chain of trust validated
+
+---
+
+## Transport
+
+Supported transports:
+- UDP (fallback)
+- TCP
+- QUIC (preferred)
+- HTTPS (DoH compatibility)
+
+---
+
+## Routing
+
+- Direct P2P
+- Onion routing (optional)
+- Multi-hop forwarding
+
+---
+
+## Error Handling
+
+- INVALID_SIGNATURE
+- RECORD_NOT_FOUND
+- TIMEOUT
+- MALFORMED_PACKET
